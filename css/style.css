@@ -1,0 +1,188 @@
+/* Global Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: lightcyan;
+  text-align: center;
+  font-family: inherit;
+}
+
+/* Skip to main content positioning */
+body > a {
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+body a:focus {
+  top: 0;
+}
+
+/* General Text Styling */
+h1,
+h2 {
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 1.1em;
+  margin: 20px 0 5px 0;
+}
+
+/* Navigation Styles */
+nav ul {
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  font-size: 1.1em;
+  background-color: aqua;
+}
+
+/* Menu Button */
+#menu-button {
+  background-color: #333;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+}
+
+/* Menu Styles */
+#menu {
+  list-style: none;
+  display: none;
+  background-color: #444;
+  padding: 0;
+}
+
+#menu.show {
+  display: block;
+}
+
+#menu li {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid #555;
+  width: 100%;
+}
+
+#menu li:hover {
+  background-color: aqua;
+}
+
+ul#menu li a {
+  color: white;
+}
+
+nav .submenu {
+  display: none;
+}
+
+nav .submenu.show {
+  display: block;
+}
+
+/* Image Styling */
+img {
+  display: block;
+  width: 90%;
+  border-radius: 10px;
+  border: 3px solid black;
+  margin: auto;
+}
+
+/* Table Styling */
+table {
+  width: 90%;
+  margin: auto;
+  table-layout: auto;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid black;
+  width: 50%;
+}
+
+thead th {
+  background-color: #444;
+  color: white;
+  font-weight: bold;
+}
+
+/* Rounded Corners for Tables */
+thead th:first-child {
+  border-top-left-radius: 5px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 5px;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+/* Athlete Table Specific */
+#athlete-table thead th:nth-child(3) {
+  border-top-right-radius: 5px;
+}
+
+#athlete-table tbody tr:last-child td:nth-child(3) {
+  border-bottom-right-radius: 5px;
+}
+
+/* Alternate Table Row Colors */
+tbody tr:nth-child(2n) {
+  background-color: lightblue;
+}
+
+tbody tr:nth-child(2n + 1) {
+  background-color: lightyellow;
+}
+table#athlete-table thead tr th:nth-child(4) {
+  display: none;
+  border: none;
+}
+
+table#athlete-table tbody tr td:nth-child(4) {
+  display: none;
+  border: none;
+}
