@@ -186,3 +186,8 @@ table#athlete-table tbody tr td:nth-child(4) {
   display: none;
   border: none;
 }
+
+table#athlete-table thead {
+  position: sticky;
+  top: 0;
+}
