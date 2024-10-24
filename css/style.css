@@ -109,8 +109,8 @@ nav ul li .submenu {
 
 #menu li:hover {
   background-color: #111;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .submenu.show:hover {
