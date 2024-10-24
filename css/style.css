@@ -73,6 +73,10 @@ nav ul li:hover {
   font-weight: bold;
 }
 
+#menu-button:hover {
+  background-color: #111;
+}
+
 /* Menu Styles */
 #menu {
   list-style: none;
@@ -96,7 +100,7 @@ nav ul li:hover {
 }
 
 #menu li:hover {
-  background-color: aqua;
+  background-color: #111;
 }
 
 ul#menu li a {

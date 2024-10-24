@@ -1,6 +1,7 @@
 import csv
 import os
 import glob
+import re
 
 def process_athlete_data(file_path):
 
@@ -45,7 +46,7 @@ def process_athlete_data(file_path):
 def generate_nav_links(team, athlete_files):
     nav_links = ""
     for file in athlete_files:
-        athlete_name = file.split('.')[0]  # Remove the .csv extension for display
+        athlete_name = re.split(r'\d', file)[0]  # Remove the #.csv extension for display
         athlete_page = f'<li><a href="../{team}/{file.replace(".csv", ".html")}">{athlete_name}</a></li>'
         nav_links += athlete_page
     return nav_links
