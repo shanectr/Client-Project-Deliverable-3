@@ -20,7 +20,7 @@ body {
 /* Skip to main content positioning */
 body > a {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: 0;
 }
 
@@ -57,7 +57,10 @@ nav ul li {
 
 nav ul li:hover {
   font-size: 1.1em;
-  background-color: aqua;
+}
+
+nav ul li .submenu {
+  margin-top: 12px;
 }
 
 /* Menu Button */
@@ -83,6 +86,7 @@ nav ul li:hover {
   display: none;
   background-color: #444;
   padding: 0;
+  line-height: 1;
 }
 
 #menu.show {
@@ -95,16 +99,33 @@ nav ul li:hover {
   text-align: center;
   font-weight: bold;
   color: white;
-  border-bottom: 1px solid #555;
+  border-bottom: 2px solid #555;
   width: 100%;
+}
+
+#menu li:last-child {
+  border-bottom: none;
 }
 
 #menu li:hover {
   background-color: #111;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.submenu.show:hover {
+  background-color: #333;
 }
 
 ul#menu li a {
   color: white;
+}
+
+ul#menu.show {
+  border: 2px solid black;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 nav .submenu {
@@ -113,6 +134,7 @@ nav .submenu {
 
 nav .submenu.show {
   display: block;
+  border: 1px solid white;
 }
 
 /* Image Styling */
