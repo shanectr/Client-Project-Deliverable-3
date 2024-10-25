@@ -197,8 +197,8 @@ def generate_index_page(men_athletes, women_athletes, outfile):
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/reset.css" />
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <script src="https://kit.fontawesome.com/2441e1402d.js" crossorigin="anonymous"></script>
         <title>Home Page</title>
       </head>
