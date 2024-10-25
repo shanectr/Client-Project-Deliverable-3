@@ -145,6 +145,8 @@ ul#menu.show {
 
 nav .submenu {
   display: none;
+  max-height: 33vh;
+  overflow-y: auto;
 }
 
 nav .submenu.show {
@@ -246,4 +248,17 @@ table#athlete-table thead {
 footer {
   margin-top: 25px;
   margin-bottom: 25px;
+}
+
+/* Home Page Styling */
+
+.index-h1 {
+  margin-top: 15px;
+}
+
+.logo {
+  width: 50%;
+  margin-top: 15px;
+  border-radius: 10%;
+  border: 3px solid;
 }

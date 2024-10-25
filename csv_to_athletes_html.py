@@ -44,9 +44,20 @@ def process_athlete_data(file_path):
    }    
 
 def generate_nav_links(team, athlete_files):
+    # Extract names and sort them by last name
+    def extract_last_name(file):
+        # Remove the number and CSV extension, then split by space
+        name = re.split(r'\d', file)[0].strip()  # Get the name without numbers
+        name_parts = name.split()  # Split by space
+        return name_parts[-1].lower()  # Get last name and return in lower case
+
+    # Sort athlete files by last name
+    sorted_files = sorted(athlete_files, key=extract_last_name)
+    
+    # Generate nav links
     nav_links = ""
-    for file in athlete_files:
-        athlete_name = re.split(r'\d', file)[0]  # Remove the #.csv extension for display
+    for file in sorted_files:
+        athlete_name = re.split(r'\d', file)[0].strip()  # Get the name without numbers
         athlete_page = f'<li><a href="../{team}/{file.replace(".csv", ".html")}">{athlete_name}</a></li>'
         nav_links += athlete_page
     return nav_links
@@ -177,17 +188,69 @@ def gen_athlete_page(data, outfile, men_athletes, women_athletes):
    with open(outfile, 'w') as output:
       output.write(html_content)
 
+def generate_index_page(men_athletes, women_athletes, outfile):
+    men_nav_links = generate_nav_links('mens_team', men_athletes)
+    women_nav_links = generate_nav_links('womens_team', women_athletes)
+    
+    html_content = f'''<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <script src="https://kit.fontawesome.com/2441e1402d.js" crossorigin="anonymous"></script>
+        <title>Home Page</title>
+      </head>
+      <body>
+        <a href="#main" tabindex="0">Skip to Main Content</a>
+      <nav>
+         <button id="menu-button">Menu</button>
+         <ul id="menu">
+            <li id="home-page-link"><a href="../index.html">Home Page</a></li>
+            <li>
+               <button class="team">Men's Team</button>
+               <ul class="submenu">
+                  {men_nav_links}
+               </ul>
+            </li>
+            <li>
+               <button class="team">Women's Team</button>
+               <ul class="submenu">
+                  {women_nav_links}
+               </ul>
+            </li>
+         </ul>
+      </nav>
+        <h1 class="index-h1">Skyline Cross Country</h1>
+        <img class="logo" src="/images/skyline-logo.jpg" alt="skyline high school logo">
+        <footer>
+            <p>
+            Skyline High School<br>
+            <address>
+            2552 North Maple Road<br>
+            Ann Arbor, MI 48103<br><br>
+            <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
+            Follow us on <a href = "https://www.instagram.com/a2skylinexc/">Instagram <i class="fab fa-instagram" aria-label="Instagram"></i></a> 
+            </footer>
+        <script src="../js/script.js"></script>
+      </body>
+    </html>'''
+
+    with open(outfile, 'w') as output:
+        output.write(html_content)
+
 
 def main():
     # Define the folder paths
     men_folder = 'mens_team/'
     women_folder = 'womens_team/'
 
-    # Get all csv files in the men's folder
+    # Get all CSV files in the men's folder
     men_csv_files = glob.glob(os.path.join(men_folder, '*.csv'))
     men_csv_file_names = [os.path.basename(file) for file in men_csv_files]
 
-    # Get all csv files in the women's folder
+    # Get all CSV files in the women's folder
     women_csv_files = glob.glob(os.path.join(women_folder, '*.csv'))
     women_csv_file_names = [os.path.basename(file) for file in women_csv_files]
 
@@ -200,6 +263,9 @@ def main():
     for file in women_csv_file_names:
         athlete_data = process_athlete_data(os.path.join(women_folder, file))
         gen_athlete_page(athlete_data, os.path.join(women_folder, file.replace(".csv", ".html")), men_csv_file_names, women_csv_file_names)
+
+    # Generate the index page
+    generate_index_page(men_csv_file_names, women_csv_file_names, 'index.html')
 
 if __name__ == '__main__':
     main()
