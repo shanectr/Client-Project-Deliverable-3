@@ -50,11 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Check if the current URL is the homepage
   const homePageLink = document.getElementById("home-page-link");
-  if (
-    window.location.pathname === "/Client-Project-Deliverable-3/" ||
-    window.location.pathname === "/" ||
-    window.location.pathname === "/index.html"
-  ) {
+
+  // Get the current pathname
+  const pathName = window.location.pathname;
+
+  // Get the base URL of the GitHub Pages site
+  const basePath = window.location.origin + window.location.pathname;
+
+  // Check if the current page is the homepage (root of the site)
+  if (pathName === "/" || basePath.endsWith("/")) {
     // Hide the "Home Page" link
     homePageLink.style.display = "none";
   }
