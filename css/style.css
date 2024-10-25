@@ -142,6 +142,14 @@ nav .submenu.show {
   margin-top: 10px;
 }
 
+button.team {
+  border: none;
+  background-color: inherit;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+
 /* Image Styling */
 img {
   display: block;
