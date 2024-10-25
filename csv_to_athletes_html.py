@@ -90,7 +90,7 @@ def gen_athlete_page(data, outfile, men_athletes, women_athletes):
    <nav>
     <button id="menu-button">Menu</button>
     <ul id="menu">
-        <li><a href="../index.html">Home Page</a></li>
+        <li><a href="../">Home Page</a></li>
         <li>
             <button class="team">Men's Team</button>
             <ul class="submenu">
