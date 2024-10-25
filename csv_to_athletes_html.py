@@ -73,8 +73,7 @@ def gen_athlete_page(data, outfile, men_athletes, women_athletes):
    # Generate athlete-specific navigation links
    men_nav_links = generate_nav_links('mens_team', men_athletes)
    women_nav_links = generate_nav_links('womens_team', women_athletes)
-   # template 
-   # Start building the HTML structure
+   
    html_content = f'''<!DOCTYPE html>
    <html lang="en">
    <head>
@@ -195,6 +194,7 @@ def gen_athlete_page(data, outfile, men_athletes, women_athletes):
    with open(outfile, 'w') as output:
       output.write(html_content)
 
+# generate index.html page
 def generate_index_page(men_athletes, women_athletes, outfile):
     men_nav_links = generate_nav_links('mens_team', men_athletes, is_homepage=True)
     women_nav_links = generate_nav_links('womens_team', women_athletes, is_homepage=True)
