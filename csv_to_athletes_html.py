@@ -73,7 +73,7 @@ def gen_athlete_page(data, outfile, men_athletes, women_athletes):
       <title>{data["name"]}</title>
    </head>
    <body>
-   <a href = "#main">Skip to Main Content</a>
+   <a href = "#main" tabindex="0"   >Skip to Main Content</a>
    <nav>
     <button id="menu-button">Menu</button>
     <ul id="menu">

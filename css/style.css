@@ -11,6 +11,11 @@ a {
   color: black;
 }
 
+table a,
+footer a {
+  color: blue;
+}
+
 body {
   background-color: lightcyan;
   text-align: center;
@@ -22,11 +27,12 @@ body > a {
   position: absolute;
   top: -30px;
   left: 0;
+  color: white;
 }
 
 body a:focus {
-  top: 2;
-  left: 2;
+  top: 5px;
+  left: 5px;
 }
 
 /* General Text Styling */
@@ -155,7 +161,7 @@ img {
   display: block;
   width: 90%;
   border-radius: 10px;
-  border: 3px solid black;
+  border: 2px solid black;
   margin: auto;
 }
 
