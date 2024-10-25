@@ -165,7 +165,7 @@ def gen_athlete_page(data, outfile, men_athletes, women_athletes):
                      Ann Arbor, MI 48103<br><br>
 
                      <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
-                    Follow us on Instagram <a href = "https://www.instagram.com/a2skylinexc/"><i class="fab fa-instagram" aria-label="Instagram"></i></a> 
+                    Follow us on <a href = "https://www.instagram.com/a2skylinexc/">Instagram <i class="fab fa-instagram" aria-label="Instagram"></i></a> 
 
 
                      </footer>
