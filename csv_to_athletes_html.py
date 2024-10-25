@@ -43,7 +43,7 @@ def process_athlete_data(file_path):
       "comments": comments
    }    
 
-def generate_nav_links(team, athlete_files):
+def generate_nav_links(team, athlete_files, is_homepage=False):
     # Extract names and sort them by last name
     def extract_last_name(file):
         # Remove the number and CSV extension, then split by space
@@ -58,8 +58,15 @@ def generate_nav_links(team, athlete_files):
     nav_links = ""
     for file in sorted_files:
         athlete_name = re.split(r'\d', file)[0].strip()  # Get the name without numbers
-        athlete_page = f'<li><a href="../{team}/{file.replace(".csv", ".html")}">{athlete_name}</a></li>'
+        
+        # Determine the correct href based on whether it's the homepage
+        if is_homepage:
+            athlete_page = f'<li><a href="{team}/{file.replace(".csv", ".html")}">{athlete_name}</a></li>'
+        else:
+            athlete_page = f'<li><a href="../{team}/{file.replace(".csv", ".html")}">{athlete_name}</a></li>'
+        
         nav_links += athlete_page
+        
     return nav_links
 
 def gen_athlete_page(data, outfile, men_athletes, women_athletes):
@@ -207,7 +214,7 @@ def generate_index_page(men_athletes, women_athletes, outfile):
       <nav>
          <button id="menu-button">Menu</button>
          <ul id="menu">
-            <li id="home-page-link"><a href="../index.html">Home Page</a></li>
+            <li id="home-page-link"><a href="/index.html">Home Page</a></li>
             <li>
                <button class="team">Men's Team</button>
                <ul class="submenu">
