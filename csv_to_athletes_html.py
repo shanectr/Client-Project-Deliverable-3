@@ -79,13 +79,13 @@ def gen_athlete_page(data, outfile, men_athletes, women_athletes):
     <ul id="menu">
         <li><a href="../index.html">Home Page</a></li>
         <li>
-            <span class="team">Men's Team</span>
+            <button class="team">Men's Team</button>
             <ul class="submenu">
                 {men_nav_links}
             </ul>
         </li>
         <li>
-            <span class="team">Women's Team</span>
+            <button class="team">Women's Team</button>
             <ul class="submenu">
                 {women_nav_links}
             </ul>
