@@ -110,6 +110,9 @@ nav ul li .submenu {
 
 #menu li:hover {
   background-color: #111;
+}
+
+#menu li:last-child:hover {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
