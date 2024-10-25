@@ -3,6 +3,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+* {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -28,6 +31,8 @@ body > a {
   top: -30px;
   left: 0;
   color: white;
+  background-color: black;
+  font-weight: bold;
 }
 
 body a:focus {
