@@ -51,8 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Check if the current URL is the homepage
   const homePageLink = document.getElementById("home-page-link");
   if (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/"
+    window.location.pathname === "/Client-Project-Deliverable-3" ||
+    window.location.pathname === "/" ||
+    window.location.pathname === "/index.html"
   ) {
     // Hide the "Home Page" link
     homePageLink.style.display = "none";
