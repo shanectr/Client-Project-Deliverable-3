@@ -71,7 +71,7 @@ nav ul li .submenu {
   color: white;
   padding: 10px 20px;
   cursor: pointer;
-  border: none;
+  border: 2px solid black;
   font-size: 16px;
   display: block;
   font-weight: bold;
@@ -209,11 +209,11 @@ tbody tr:last-child td:last-child {
 }
 
 /* Alternate Table Row Colors */
-tbody tr:nth-child(2n) {
+tbody tr:nth-child(even) {
   background-color: lightblue;
 }
 
-tbody tr:nth-child(2n + 1) {
+tbody tr:nth-child(odd) {
   background-color: lightyellow;
 }
 table#athlete-table thead tr th:nth-child(4) {
@@ -229,4 +229,10 @@ table#athlete-table tbody tr td:nth-child(4) {
 table#athlete-table thead {
   position: sticky;
   top: 0;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
