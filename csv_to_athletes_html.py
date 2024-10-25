@@ -196,8 +196,8 @@ def gen_athlete_page(data, outfile, men_athletes, women_athletes):
       output.write(html_content)
 
 def generate_index_page(men_athletes, women_athletes, outfile):
-    men_nav_links = generate_nav_links('mens_team', men_athletes)
-    women_nav_links = generate_nav_links('womens_team', women_athletes)
+    men_nav_links = generate_nav_links('mens_team', men_athletes, is_homepage=True)
+    women_nav_links = generate_nav_links('womens_team', women_athletes, is_homepage=True)
     
     html_content = f'''<!DOCTYPE html>
     <html lang="en">
