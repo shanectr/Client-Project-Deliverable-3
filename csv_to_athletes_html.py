@@ -197,9 +197,9 @@ def generate_index_page(men_athletes, women_athletes, outfile):
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/2441e1402d.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <script src="https://kit.fontawesome.com/2441e1402d.js" crossorigin="anonymous"></script>
         <title>Home Page</title>
       </head>
       <body>
@@ -233,7 +233,7 @@ def generate_index_page(men_athletes, women_athletes, outfile):
             <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
             Follow us on <a href = "https://www.instagram.com/a2skylinexc/">Instagram <i class="fab fa-instagram" aria-label="Instagram"></i></a> 
             </footer>
-        <script src="../js/script.js"></script>
+        <script src="js/script.js"></script>
       </body>
     </html>'''
 
