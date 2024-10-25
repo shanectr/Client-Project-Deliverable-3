@@ -25,7 +25,8 @@ body > a {
 }
 
 body a:focus {
-  top: 0;
+  top: 2;
+  left: 2;
 }
 
 /* General Text Styling */
@@ -135,6 +136,7 @@ nav .submenu {
 nav .submenu.show {
   display: block;
   border: 1px solid white;
+  margin-top: 10px;
 }
 
 /* Image Styling */
