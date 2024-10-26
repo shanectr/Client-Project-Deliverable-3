@@ -71,9 +71,8 @@ nav ul li:hover {
   font-size: 1.1em;
 }
 
-nav ul li,
-#menu li {
-  transition: font-size 0.5s ease, background-color 0.5s ease;
+nav ul li .submenu {
+  margin-top: 12px;
 }
 
 /* Menu Button */
@@ -84,15 +83,13 @@ nav ul li,
   padding: 10px 20px;
   cursor: pointer;
   border: 2px solid black;
-  font-size: 1em;
+  font-size: 16px;
   display: block;
   font-weight: bold;
-  transition: background-color 0.5s ease, font-size 0.5s ease;
 }
 
 #menu-button:hover {
   background-color: #111;
-  font-size: 1.2em;
 }
 
 /* Menu Styles */
@@ -110,7 +107,7 @@ nav ul li,
 
 #menu li {
   display: block;
-  /* padding: 10px; */
+  padding: 10px;
   text-align: center;
   font-weight: bold;
   color: white;
@@ -120,8 +117,6 @@ nav ul li,
 
 #menu li:last-child {
   border-bottom: none;
-  transition: background-color 0.5s ease, border-radius 0.5s ease,
-    font-size 0.5 ease;
 }
 
 #menu li:hover {
@@ -148,14 +143,6 @@ ul#menu.show {
   border-bottom-right-radius: 10px;
 }
 
-ul#menu.show li:first-child {
-  padding: 10px;
-}
-
-ul.submenu.show li {
-  padding: 10px;
-}
-
 nav .submenu {
   display: none;
   max-height: 33vh;
@@ -165,6 +152,7 @@ nav .submenu {
 nav .submenu.show {
   display: block;
   border: 1px solid white;
+  margin-top: 10px;
 }
 
 button.team {
@@ -173,7 +161,6 @@ button.team {
   color: white;
   width: 100%;
   cursor: pointer;
-  padding: 10px;
 }
 
 /* Image Styling */
