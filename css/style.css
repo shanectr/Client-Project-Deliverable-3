@@ -5,20 +5,24 @@
   box-sizing: border-box;
 }
 
+/* all elements with fonts are this font by default */
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* all anchor tags by default */
 a {
   text-decoration: none;
   color: black;
 }
 
+/* table and footer links color */
 table a,
 footer a {
   color: blue;
 }
 
+/* body background color, and centering */
 body {
   background-color: lightcyan;
   text-align: center;
@@ -35,6 +39,7 @@ body > a {
   font-weight: bold;
 }
 
+/* brings skip to content to focus */
 body a:focus {
   top: 5px;
   left: 5px;
@@ -63,14 +68,17 @@ nav ul {
   text-align: center;
 }
 
+/* pointer on all links in list items */
 nav ul li {
   cursor: pointer;
 }
 
+/* list items increase font when hovered with mouse */
 nav ul li:hover {
   font-size: 1.1em;
 }
 
+/* adds margin to top of submenu [mens teamn, womens team] dropdowns */
 nav ul li .submenu {
   margin-top: 12px;
 }
@@ -88,6 +96,7 @@ nav ul li .submenu {
   font-weight: bold;
 }
 
+/* Menu button hover effects */
 #menu-button:hover {
   background-color: #111;
 }
@@ -101,10 +110,16 @@ nav ul li .submenu {
   line-height: 1;
 }
 
+/* Menu [Home page, mens team, womens team] menu open */
 #menu.show {
   display: block;
+  border: 2px solid black;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
+/* menu list item styling */
 #menu li {
   display: block;
   padding: 10px;
@@ -115,46 +130,47 @@ nav ul li .submenu {
   width: 100%;
 }
 
+/* menu last child [womens team] no border on bottom */
 #menu li:last-child {
   border-bottom: none;
 }
 
+/* menu list items hover effects */
 #menu li:hover {
   background-color: #111;
 }
 
+/* menu list item last child [womens team] hover affect */
 #menu li:last-child:hover {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
+/* turns athlete link boxes to a lighter grey background when hovering, allows the box being hovered to turn darker black */
 .submenu.show:hover {
   background-color: #333;
 }
 
+/* menu list item anchor tags */
 ul#menu li a {
   color: white;
 }
 
-ul#menu.show {
-  border: 2px solid black;
-  border-top: none;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-nav .submenu {
+/* submenu styling [athlete menus] */
+.submenu {
   display: none;
   max-height: 33vh;
   overflow-y: auto;
-}
-
-nav .submenu.show {
-  display: block;
   border: 1px solid white;
   margin-top: 10px;
 }
 
+/* displays submenu */
+.submenu.show {
+  display: block;
+}
+
+/* team button stying [mens team, womens team] */
 button.team {
   border: none;
   background-color: inherit;
@@ -184,6 +200,7 @@ table {
   border-radius: 5px;
 }
 
+/* table head[th] and table data [td] styling */
 th,
 td {
   padding: 10px;
@@ -192,6 +209,7 @@ td {
   width: 50%;
 }
 
+/* table head [th] element styling */
 thead th {
   background-color: #444;
   color: white;
@@ -232,16 +250,20 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
   background-color: lightyellow;
 }
+
+/* remove 4th column from table for mobile version */
 table#athlete-table thead tr th:nth-child(4) {
   display: none;
   border: none;
 }
 
+/* remove 4th column from table for mobile version */
 table#athlete-table tbody tr td:nth-child(4) {
   display: none;
   border: none;
 }
 
+/* make table head sticky when scrolling farther down screen */
 table#athlete-table thead {
   position: sticky;
   top: 0;
@@ -255,10 +277,12 @@ footer {
 
 /* Home Page Styling */
 
+/* header 1 styling */
 .index-h1 {
   margin-top: 15px;
 }
 
+/* skyline image styling */
 .logo {
   width: 50%;
   margin-top: 15px;
