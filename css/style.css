@@ -170,6 +170,7 @@ img {
   border-radius: 10px;
   border: 2px solid black;
   margin: auto;
+  box-shadow: 0 3px 8px black;
 }
 
 /* Table Styling */
@@ -179,6 +180,8 @@ table {
   table-layout: auto;
   border-spacing: 0;
   border-collapse: separate;
+  box-shadow: 0 3px 8px black;
+  border-radius: 5px;
 }
 
 th,
