@@ -298,12 +298,13 @@ button.team {
   transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
 }
 
+/* main nav menu hover color change */
 .submenu:hover,
 #menu-button:hover {
   background-color: #666;
 }
 
-/* submenu [home page, mens team, womens team] hover animation */
+/* turns athlete link boxes to a lighter grey background when hovering, allows the box being hovered to turn darker black */
 .submenu li:hover {
   background-color: #222;
 }
@@ -322,4 +323,61 @@ button.team:hover {
 #menu-button:hover {
   font-size: 1.09rem;
   padding: 9px 20px;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+    color: white;
+  }
+
+  a {
+    color: #add8e6;
+  }
+
+  #menu-button,
+  #menu li {
+    background-color: #444;
+    color: white;
+  }
+
+  thead th {
+    background-color: #555;
+  }
+
+  footer a {
+    color: rgb(24, 155, 255);
+  }
+
+  table {
+    color: black;
+  }
+
+  #menu-button:hover {
+    background-color: #222;
+  }
+
+  /* Individual submenu item hover effect */
+  .submenu.show li:hover {
+    background-color: #222 !important; /* Sets each item's hover state */
+  }
+
+  /* menu list items hover effects */
+  #menu li button:hover,
+  #menu > li:first-child:hover {
+    background-color: #222;
+  }
+
+  #menu li {
+    background-color: #444;
+  }
 }
