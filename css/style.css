@@ -282,6 +282,10 @@ footer {
   border: 3px solid;
 }
 
+address > a {
+  text-decoration: underline;
+}
+
 /* All Hover Effects for pages */
 
 /* turns athlete link boxes to a lighter grey background when hovering, allows the box being hovered to turn darker black */

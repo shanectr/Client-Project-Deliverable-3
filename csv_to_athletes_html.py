@@ -229,8 +229,10 @@ def generate_index_page(men_athletes, women_athletes, outfile):
             </li>
          </ul>
       </nav>
-        <h1 class="index-h1">Skyline Cross Country</h1>
-        <img class="logo" src="images/skyline-logo.jpg" alt="skyline high school logo">
+      <main id="main">
+         <h1 class="index-h1">Skyline Cross Country</h1>
+         <img class="logo" src="images/skyline-logo.jpg" alt="skyline high school logo">
+      </main>
         <footer>
             <p>
             Skyline High School<br>
