@@ -327,9 +327,13 @@ button.team:hover {
 
 /* Reduced Motion Preference */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  .submenu,
+  #menu-button,
+  .submenu li,
+  #menu li button,
+  #menu > li:first-child,
+  button.team {
     transition: none;
-    animation: none;
   }
 }
 
@@ -370,7 +374,7 @@ button.team:hover {
 
   /* Individual submenu item hover effect */
   .submenu.show li:hover {
-    background-color: #222 !important; /* Sets each item's hover state */
+    background-color: #222;
   }
 
   /* menu list items hover effects */
