@@ -403,6 +403,10 @@ button.team:hover {
     border-radius: 6px;
   }
 
+  header img {
+    width: 80%;
+  }
+
   /* Show 4th column in the table */
   table#athlete-table thead tr th:nth-child(4),
   table#athlete-table tbody tr td:nth-child(4) {
@@ -441,8 +445,13 @@ button.team:hover {
 /* Desktop Media Query */
 @media (min-width: 1024px) {
   table {
+    width: 70%;
     border: 1px solid black;
     border-radius: 6px;
+  }
+
+  header img {
+    width: 60%;
   }
 
   /* Show 4th column in the table */

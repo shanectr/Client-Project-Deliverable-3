@@ -62,4 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hide the "Home Page" link
     homePageLink.style.display = "none";
   }
+
+  document.querySelectorAll("img").forEach((img) => {
+    // Set the default image as the fallback
+    img.src = img.src || "../images/default_image.jpg"; // Ensure the src is set if not already
+    img.onerror = function () {
+      this.onerror = null; // Prevents infinite loop if default image missing
+      this.src = "../images/default_image.jpg";
+      this.alt = "default runner image";
+    };
+  });
 });
