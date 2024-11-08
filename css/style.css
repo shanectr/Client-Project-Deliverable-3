@@ -192,6 +192,10 @@ table {
   border-radius: 5px;
 }
 
+tbody {
+  font-size: 13px;
+}
+
 /* table head[th] and table data [td] styling */
 th,
 td {
@@ -385,5 +389,89 @@ button.team:hover {
 
   #menu li {
     background-color: #444;
+  }
+}
+
+/* Tablet Media Query */
+@media (min-width: 600px) {
+  table {
+    border: 1px solid black;
+    border-radius: 6px;
+  }
+
+  /* Show 4th column in the table */
+  table#athlete-table thead tr th:nth-child(4),
+  table#athlete-table tbody tr td:nth-child(4) {
+    display: table-cell;
+    border: 1px solid black;
+  }
+
+  /* Adjust border-radius for the 4th column corners */
+  #athlete-table thead th:nth-child(4) {
+    border-top-right-radius: 5px;
+  }
+
+  #athlete-table tbody tr:last-child td:nth-child(4) {
+    border-bottom-right-radius: 5px;
+  }
+
+  /* remove third colum border radius */
+  #athlete-table thead th:nth-child(3),
+  #athlete-table tbody tr:last-child td:nth-child(3) {
+    border-radius: 0;
+  }
+
+  tbody {
+    font-size: 14px;
+  }
+
+  #athlete-table .result-row td {
+    width: 25%;
+  }
+
+  #athlete-table {
+    table-layout: fixed;
+  }
+}
+
+/* Desktop Media Query */
+@media (min-width: 1024px) {
+  table {
+    border: 1px solid black;
+    border-radius: 6px;
+  }
+
+  /* Show 4th column in the table */
+  table#athlete-table thead tr th:nth-child(4),
+  table#athlete-table tbody tr td:nth-child(4) {
+    display: table-cell;
+    border: 1px solid black;
+  }
+
+  /* Adjust border-radius for the 4th column corners */
+  #athlete-table thead th:nth-child(4) {
+    border-top-right-radius: 5px;
+  }
+
+  #athlete-table tbody tr:last-child td:nth-child(4) {
+    border-bottom-right-radius: 5px;
+  }
+
+  /* remove third colum border radius */
+  #athlete-table thead th:nth-child(3),
+  #athlete-table tbody tr:last-child td:nth-child(3) {
+    border-radius: 0;
+  }
+
+  tbody {
+    font-size: 15px;
+  }
+
+  #athlete-table .result-row td {
+    width: 25%;
+  }
+
+  #athlete-table {
+    table-layout: fixed;
   }
 }
