@@ -360,6 +360,10 @@ button.team:hover {
     color: white;
   }
 
+  .submenu li {
+    background-color: #222;
+  }
+
   thead th {
     background-color: #555;
   }
@@ -377,8 +381,8 @@ button.team:hover {
   }
 
   /* Individual submenu item hover effect */
-  .submenu.show li:hover {
-    background-color: #222;
+  #menu .submenu li:hover {
+    background-color: #555;
   }
 
   /* menu list items hover effects */
@@ -387,8 +391,8 @@ button.team:hover {
     background-color: #222;
   }
 
-  #menu li {
-    background-color: #444;
+  #menu .submenu li {
+    background-color: #222;
   }
 }
 
